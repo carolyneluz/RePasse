@@ -1,95 +1,60 @@
-📱 RePasse – App Mobile de Organização de Doações
+# 📱 RePasse – Organizador de Doações  
+Aplicativo Android nativo desenvolvido em **Kotlin** para cadastrar, visualizar, editar e excluir itens que serão doados.  
+Projeto da disciplina **Desenvolvimento Mobile – PUCPR**.
 
-Projeto desenvolvido para a disciplina de Desenvolvimento Mobile – PUCPR
+---
 
-O RePasse é um aplicativo Android nativo desenvolvido em Kotlin, criado para facilitar o registro e organização de itens destinados a doação.
-O app permite adicionar, visualizar, editar e excluir doações, oferecendo uma interface simples, prática e responsiva.
+## ✨ Funcionalidades
 
-🎯 Funcionalidades principais
+- **Login simples** para entrada no app.  
+- **Lista de doações** cadastradas.
+- **Cadastro de novos itens** com:
+  - Nome  
+  - Categoria  
+  - Quantidade  
+  - Condição  
+  - Observações  
+  - Status automático (“Pendente”)  
+- **Edição de itens já cadastrados**  
+  → Toque no item para abrir a tela de edição.  
+- **Exclusão com Long Press**  
+  → Pressione e segure um item para deletar.  
 
-Login básico
-Apenas para entrada no app (não há autenticação real nesta versão).
+---
 
-Cadastro de novas doações
-Inclui:
-
-Nome do item
-
-Categoria
-
-Quantidade
-
-Condição
-
-Observações opcionais
-
-Listagem das doações em cards
-
-Exibição organizada usando RecyclerView
-
-Cards limpos e com boa hierarquia visual
-
-Mostra nome, categoria, quantidade, condição e observações
-
-Edição de doações já cadastradas
-Toque no item → abre tela de edição.
-
-Exclusão com “long press”
-Segure o item da lista → opção de deletar.
-
-🧱 Arquitetura utilizada
+## 🧱 Arquitetura utilizada
 
 O app utiliza uma estrutura simples, adequada para projetos iniciais:
 
-3 Activities principais
+### **3 Activities principais**
+- **MainActivity** → Tela de login  
+- **ListaDoacoesActivity** → Exibe a lista e permite gerenciar itens  
+- **CadastroDoacaoActivity** → Criar e editar doações  
 
-MainActivity → Tela de login
+### **Persistência de dados**
+- **SQLite** via `SQLiteOpenHelper`  
+  → Banco local para CRUD completo (Create, Read, Update, Delete)
 
-ListaDoacoesActivity → Lista e gerenciamento de doações
+### **Listagem otimizada**
+- **RecyclerView + Adapter customizado**  
+  → Para exibir as doações com melhor performance
 
-CadastroDoacaoActivity → Criar/editar doações
+---
 
-SQLite (via SQLiteOpenHelper)
-Banco de dados local para CRUD completo.
+## 📁 Estrutura de Pastas
 
-RecyclerView + Adapter personalizado
-Para listar itens de forma otimizada.
-
-🗂 Estrutura de Pastas
+```text
 app/
  ├── java/com.example.repasse/
- │   ├── MainActivity.kt
- │   ├── ListaDoacoesActivity.kt
- │   ├── CadastroDoacaoActivity.kt
- │   ├── Doacao.kt
- │   ├── DoacaoAdapter.kt
- │   └── DoacaoDbHelper.kt
+ │    ├── MainActivity.kt
+ │    ├── ListaDoacoesActivity.kt
+ │    ├── CadastroDoacaoActivity.kt
+ │    ├── Doacao.kt
+ │    ├── DoacaoAdapter.kt
+ │    └── DoacaoDbHelper.kt
+ │
  └── res/
-     ├── layout/
-     ├── values/
-     └── drawable/
+      ├── layout/
+      ├── values/
+      └── drawable/
 
-💾 Tecnologias usadas
-
-Kotlin
-
-Android Studio
-
-SQLite
-
-RecyclerView
-
-Material Design básico
-
-🚀 Como rodar o projeto
-
-Clone este repositório:
-
-git clone https://github.com/carolyneluz/RePasse.git
-
-
-Abra o projeto no Android Studio
-
-Aguarde o Gradle sincronizar
-
-Rode no emulador ou em um dispositivo físico
