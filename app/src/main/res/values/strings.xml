@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RePasse</string>
+
+    <!-- Categorias da doação -->
+    <string-array name="categorias_doacao">
+        <item>Roupas</item>
+        <item>Calçados</item>
+        <item>Brinquedos</item>
+        <item>Higiene</item>
+        <item>Alimentos</item>
+        <item>Eletrodomésticos</item>
+        <item>Móveis</item>
+        <item>Outros</item>
+    </string-array>
+
+    <!-- Condições -->
+    <string-array name="condicoes_doacao">
+        <item>Novo</item>
+        <item>Bom estado</item>
+        <item>Usado</item>
+        <item>Danificado (para reciclagem)</item>
+    </string-array>
+</resources>
